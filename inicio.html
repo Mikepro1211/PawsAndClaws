@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal Fusionada</title>
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos del header */
+        header {
+            background-color: #FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el carrusel */
+        .slide {
+            position: relative;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+            margin-top: 30px;
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .slide-inner {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 500px;
+        }
+
+        .slide-open:checked + .slide-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .slide-item {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.6s ease-out;
+        }
+
+        .slide-item img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slide-control {
+            background: rgba(0, 0, 0, 0.28);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 40px;
+            height: 40px;
+            line-height: 35px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            text-align: center;
+            width: 40px;
+            z-index: 10;
+        }
+
+        .slide-control.prev {
+            left: 5%;
+        }
+
+        .slide-control.next {
+            right: 5%;
+        }
+
+        .slide-control:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaaaaa;
+        }
+
+        #slide-1:checked ~ .control-1,
+        #slide-2:checked ~ .control-2,
+        #slide-3:checked ~ .control-3,
+        #slide-4:checked ~ .control-4 {
+            display: block;
+        }
+
+        .slide-indicador {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .slide-indicador li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .slide-circulo {
+            color: #828282;
+            cursor: pointer;
+            display: block;
+            font-size: 35px;
+        }
+
+        .slide-circulo:hover {
+            color: #aaaaaa;
+        }
+
+        /* Estilos para los cuadros de información */
+        .info-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .info-box {
+            width: 45%;
+            padding: 20px;
+            margin: 10px;
+            background-color: #456850;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            font-size: 25px;
+            font-family: Arial, sans-serif;
+        }
+
+        .info-box.large {
+            width: 95%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header del primer código -->
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a href="inicio.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Leyes</a>
+                <div class="dropdown-content">
+                    <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                    <a href="animales de compañía.html">Animales de compañía</a>
+                    <a href="animales silvestres.html">Animales Silvestres</a>
+                    <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+                </div>
+            </div>
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+            <div class="dropdown">
+                <a href="Veterinarias.html" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+            <div class="dropdown">
+                <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrusel del segundo código -->
+    <div class="slide">
+        <div class="slide-inner">
+            <input class="slide-open" type="radio" id="slide-1" name="slide" hidden="" checked="checked">
+            <div class="slide-item">
+                <img src="cat.jpg" alt="Gato">
+            </div>
+            <input class="slide-open" type="radio" id="slide-2" name="slide" hidden="">
+            <div class="slide-item">
+                <img src="dog.jpg" alt="Perro">
+            </div>
+            <input class="slide-open" type="radio" id="slide-3" name="slide" hidden="">
+            <div class="slide-item">
+                <img src="seaturtle.jpg" alt="Tortuga">
+            </div>
+            <input class="slide-open" type="radio" id="slide-4" name="slide" hidden="">
+            <div class="slide-item">
+                <img src="bird.jpg" alt="Ave">
+            </div>
+            <label for="slide-4" class="slide-control prev control-1">‹</label>
+            <label for="slide-2" class="slide-control next control-1">›</label>
+            <label for="slide-1" class="slide-control prev control-2">‹</label>
+            <label for="slide-3" class="slide-control next control-2">›</label>
+            <label for="slide-2" class="slide-control prev control-3">‹</label>
+            <label for="slide-4" class="slide-control next control-3">›</label>
+            <label for="slide-3" class="slide-control prev control-4">‹</label>
+            <label for="slide-1" class="slide-control next control-4">›</label>
+            <ol class="slide-indicador">
+                <li>
+                    <label for="slide-1" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-2" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-3" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-4" class="slide-circulo">•</label>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Información del segundo código -->
+    <div class="info-container">
+        <div class="info-box">
+            <h3>Misión</h3>
+            <p>Promover la conservación y el bienestar de las especies animales de El Salvador mediante la educación, la concientización y el acceso a recursos que faciliten la interacción responsable con la fauna local.</p>
+        </div>
+        <div class="info-box">
+            <h3>Visión</h3>
+            <p>Ser un referente en la conservación de la fauna salvadoreña, fomentando una cultura de respeto y cuidado hacia los animales y su hábitat.</p>
+        </div>
+        <div class="info-box">
+            <h3>Objetivo</h3>
+            <p>Brindar información y recursos que contribuyan a la protección y bienestar de las especies animales, impulsando acciones concretas que mejoren su calidad de vida.</p>
+        </div>
+    </div>
+</body>
+</html>

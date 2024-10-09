@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocodrilo</title>
+    <style>
+
+        /* Estilos para el fondo de la página */
+        body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+        header {
+            background-color:#FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el título, subtítulo y texto movibles */
+        .movable-title {
+            position: absolute;
+            color: #456850;
+            font-size: 36px;
+            left: 10%;
+            top: 70%;
+        }
+
+        .movable-subtitle {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 80%;
+        }
+
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 90%;
+        }
+
+        .movable-subtitle-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 120%;
+        }
+
+        .movable-text-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 130%;
+        }
+
+        .movable-subtitle-3 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 160%;
+        }
+
+        .movable-text-3 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 170%;
+        }
+
+        /* Estilos para imagen movible */
+        .movable-image {
+            position: absolute;
+            width: 300px; /* Ajusta el tamaño de la imagen */
+            left: 20%; /* Ajusta según sea necesario */
+            top: 110%;  /* Ajusta según sea necesario */
+            transform: translate(-50%, -50%); /* Centra la imagen */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a img src="Paws.png"></a>
+
+            <a href="inicio.html">Inicio</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Leyes</a>
+            <div class="dropdown-content">
+                <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                <a href="animales de compañía.html">Animales de compañía</a>
+                <a href="animales silvestres.html">Animales Silvestres</a>
+                <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+            </div>
+            </div>
+            
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+        
+        
+        <div class="dropdown">
+            <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Título movible -->
+    <div class="movable-title">
+        Cocodrilos
+    </div>
+
+    <!-- Subtítulo movible -->
+    <div class="movable-subtitle">
+        Definición
+    </div>
+
+    <!-- Texto movible -->
+    <div class="movable-text">
+        Los cocodrilos son animales feroces, depredadores de 
+        cuerpo robusto con piel gruesa y grandes bocas dentadas,
+        que llevan vidas solitarias y territoriales. Los cocodrilos
+        son animales voraces, de grandes y fuertes mandíbulas, que 
+        se desplazan por tierra y por agua muy rápido.
+
+
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-2">
+        Hábitat
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-2">
+        Los cocodrilos habitan en su mayoría en los contornos de 
+        lagos, lagunas, ríos e incluso en agua salada, dependiendo
+        de la especie, ya que sin ser anfibios, son animales perfectamente
+        adaptados para el nado. Tienden a preferir las tierras bajas de la
+        zona climática intertropical en América, África, Asia y Oceanía.
+
+    
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-3">
+       Consejos
+    </div>
+    <div class="movable-text-3">
+        - Los cocodrilos deben tener un espacio suficiente
+         para moverse y nadar, con una fuente de agua a 
+         una temperatura de 23° a 28°C
+
+         <br>
+
+        - No tires basura al mar, especialmente plásticos, que 
+        pueden ser ingeridos por las tortugas. 
+
+         <br>
+
+        - Deben alimentarse aproximadamente 3-4 veces por 
+        semana cuando son jóvenes, reduciendo a 2-3 veces 
+        por semana al crecer
+
+    </div>
+
+    <!-- Imagen movible -->
+    <img src="cocodrilo.jpg" alt="Guacamayo" class="movable-image">
+
+</body>
+</html>

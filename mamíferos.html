@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mamíferos</title>
+    <style>
+        /* Estilos para el fondo de la página */
+        body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+         /* Estilos para los contenedores de los botones */
+         .button-container {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            cursor: move;
+            text-align: center;
+        }
+
+        /* Estilos para los contenedores de las imágenes */
+        .image-container {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            cursor: move;
+            text-align: center;
+        }
+
+        /* Estilos para los botones */
+        button {
+            padding: 10px 20px;
+            font-size: 28px;
+            cursor: pointer;
+            background-color: #456850;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            margin-bottom: 10px; /* Espacio entre el botón y la imagen */
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        /* Efecto hover para los botones */
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Efecto active para los botones */
+        button:active {
+            transform: scale(1.2);
+            background-color: #6FA97A;
+        }
+
+        header {
+            background-color:#FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px white(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el texto movible */
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 50%; /* Puedes ajustar el valor para moverlo horizontalmente */
+            top: 110%;  /* Puedes ajustar el valor para moverlo verticalmente */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a img src="Paws.png"></a>
+
+            <a href="inicio.html">Inicio</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Leyes</a>
+            <div class="dropdown-content">
+                <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                <a href="animales de compañía.html">Animales de compañía</a>
+                <a href="animales silvestres.html">Animales Silvestres</a>
+                <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+            </div>
+            </div>
+            
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+        
+        
+        <div class="dropdown">
+            <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="content">
+        <!-- Contenedor 1 con su propio botón e imagen -->
+        <div id="container1" class="button-container" style="left: 25%; top: 70%;">
+            <button id="button1" onclick="location.href='perro.html'">Perro</button>
+        </div>
+        <div id="image1" class="image-container" style="left: 25%; top: 85%; width: 150px; height: auto;">
+            <img src="perro especie.jpg" alt="Perro" class="button-image" style="width: 150%; height: 100%;">
+        </div>
+
+        <!-- Contenedor 2 con su propio botón e imagen -->
+        <div id="container2" class="button-container" style="left: 50%; top: 70%;">
+            <button id="button2" onclick="location.href='gato.html'">Gato</button>
+        </div>
+        <div id="image2" class="image-container" style="left: 50%; top: 85%;  width: 150px; height: auto;">
+            <img src="gato especie.jpg" alt="Gato" class="button-image" style="width: 150%; height: 100%;">
+        </div>
+
+        <!-- Contenedor 3 con su propio botón e imagen -->
+        <div id="container3" class="button-container" style="left: 75%; top: 70%;">
+            <button id="button3" onclick="location.href='conejo.html'">Conejo</button>
+        </div>
+        <div id="image3" class="image-container" style="left: 75%; top: 85%;  width: 150px; height: auto;">
+            <img src="conejo especie.jpg" alt="Conejo" class="button-image" style="width: 150%; height: 100%;">
+        </div>
+    </div>
+
+    <!-- Texto movible -->
+    <div class="movable-text">
+       Elige el animal del que te quieras informar ;)
+    </div>
+</body>
+</html>

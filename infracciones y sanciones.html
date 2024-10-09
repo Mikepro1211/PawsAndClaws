@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infracciones y Sanciones</title>
+    <style>
+        /* Estilos para el fondo de la página */
+        body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+        header {
+            background-color:#FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el título, subtítulo y texto movibles */
+        .movable-title {
+            position: absolute;
+            color: #456850;
+            font-size: 36px;
+            left: 10%;
+            top: 70%;
+        }
+
+        .movable-subtitle {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 80%;
+        }
+
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .movable-subtitle-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 340%;
+        }
+
+        .movable-text-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 395%;
+        }
+
+        /* Estilos para los cuadros de artículos */
+        .article-box {
+            background-color: #456850;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            position: absolute; /* Cambiado a 'absolute' */
+            max-width: calc(50% - 20px); /* Ancho máximo de los cuadros */
+            box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+            display: inline-block; /* Permite que los cuadros se alineen en filas */
+            vertical-align: top; /* Alinea los cuadros en la parte superior */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        /* centrar texto */
+        .centrado{
+            text-align: center;
+        }
+         /* cambiar estilo a la letra */
+         k {
+            font-family: Times New Roman;
+            font-size: 26px;
+            color: #456850;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a img src="Paws.png"></a>
+            <a href="inicio.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Leyes</a>
+                <div class="dropdown-content">
+                    <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                    <a href="animales de compañía.html">Animales de compañía</a>
+                    <a href="animales silvestres.html">Animales Silvestres</a>
+                    <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+                </div>
+            </div>
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+            <div class="dropdown">
+                <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Título movible -->
+    <div class="movable-title">
+        Leyes de Protección Animal y Obligaciones de Cuidado Responsable
+    </div>
+
+    <!-- Subtítulo movible -->
+    <div class="movable-subtitle">
+        <p class="centrado"> <strong>TÍTULO IV. Régimen Sancionatorio</strong><br></p>
+        <p class="centrado"><strong>Capítulo 1. Infracciones</strong><br></p>
+    </div>
+
+    <!-- Texto movible -->
+    <div class="movable-text" style="left: 20%; top: 100%;">
+            <strong><k>Infracciones leves</k></strong>
+    </div>
+
+    <div class="article-box" style="left: 10%; top: 110%;">
+        <br><strong>Art. 61.</strong> Son infracciones leves:</br>
+        <br>a. No tener identificado debidamente al animal de compañía.</br>
+        <br>b. No presentar la cartilla de vacunación actualizada cuando lo requiera la autoridad.</br>
+        <br>c. No mantener a los animales de compañía o silvestres en buenas condiciones higiénico-sanitarias.</br>
+        <br>d. Comprar o vender perros y gatos menores de 45 días.</br>
+        <br>e. No proporcionar la atención veterinaria necesaria al animal de compañía.</br>
+    </div>
+
+    <div class="movable-text" style="left: 20%; top: 160%;">
+            <br><strong><k>Infracciones graves</k></strong>
+    </div>
+
+    <div class="article-box" style="left: 10%; top: 175%;">
+        <br><strong>Art. 62.  </strong> Son infracciones graves:</br>
+        <br>a. Mantener a un animal de compañía en espacios inadecuados donde no pueda moverse libremente.</br>
+        <br>b. Transportar animales de compañía o silvestres de forma inadecuada.</br>
+        <br>c. No proporcionar condiciones físicas adecuadas, alimentación, alojamiento y abrigo según la especie del animal.</br>
+        <br>d. Evadir la vacunación de los animales de compañía sin tener registro privado en la cartilla de vacunación.</br>
+        <br>e. Permitir el acceso de animales de compañía en locales destinados a la producción y distribución de alimentos o productos de salud.</br>
+        <br>f. Causar conflictos vecinales por trato inadecuado, ruido excesivo, o no recoger las heces de los animales en lugares públicos o privados.</br>
+    </div>
+
+    <div class="movable-text" style="left: 22%; top: 240%;">
+            <br><strong><k>Infracciones muy graves</k></strong>
+    </div>
+
+    <div class="article-box" style="left: 10%; top: 255%;">
+        <br><strong>Art. 63.  </strong> Son infracciones muy graves:</br>
+        <br>a. Maltratar físicamente a los animales causando dolor, sufrimiento o estrés innecesario.</br>
+        <br>b. Abandonar animales de compañía.</br>
+        <br>c. Utilizar animales en peleas, sacrificios rituales, o actividades que les causen sufrimiento.</br>
+        <br>d. La cría y venta de animales sin cumplir con los requisitos legales y sanitarios.</br>
+        <br>e. Utilizar animales en espectáculos públicos o privados que impliquen sufrimiento.</br>
+    </div>
+
+    <!-- Subtítulo movible -->
+    <div class="movable-subtitle-2">
+        <p class="centrado"><strong>Capítulo 2. Sanciones</strong></p>
+    </div>
+
+    <div class="article-box" style="left: 10%; top: 350%;">
+            <strong>Art. 64.</strong> Las sanciones por infracciones a la ley pueden incluir multas o trabajos de utilidad pública, dependiendo de la gravedad de la infracción y la capacidad de pago del infractor. Las multas se dividen en tres categorías:</br>
+        <br>•	Infracciones leves: Multa de 1 a 3 salarios mínimos del sector comercio y servicio.</br>
+        <br>•	Infracciones graves: Multa de 4 a 6 salarios mínimos.</br>
+        <br>•	Infracciones muy graves: Multa de 7 a 10 salarios mínimos.</br>
+        </div>
+
+        <div class="article-box" style="left: 10%; top: 390%;">
+        <br><strong>Art. 67.</strong> Las sanciones se impondrán según los siguientes criterios:</br>
+        <br>•	Intensidad del daño ocasionado.</br>
+        <br>•	Antecedentes del infractor y reincidencia.</br>
+        <br>•	Existencia de dolo o culpa.</br>
+        <br>•	Naturaleza y cuantía de los daños y perjuicios causados.</br>
+        </div>
+
+        <div class="movable-text" style="left: 17%; top: 435%;">
+            <br><strong><k>Código Penal</k></strong>
+    </div>
+
+        <div class="article-box" style="left: 10%; top: 450%;">
+        <br><strong>Art. 261. A.</strong> Causar maltrato, lesiones, dolor, o sufrimiento a animales de compañía, abandonados, domésticos, o bajo control humano, se sancionará con prisión de 2 a 4 años, con posibilidad de conmutar la pena. Si el maltrato resulta en la muerte del animal, la pena aumentará hasta un tercio del máximo, e incluirá la prohibición de tenencia de animales, inhabilitación para profesiones relacionadas con animales, y una multa de 3 a 5 salarios mínimos. Excepciones incluyen sacrificios humanitarios, investigaciones científicas, y tratamientos veterinarios necesarios. El delito es de acción pública y se procede según el Código Penal.</br>    
+    </div>
+</body>
+</html>

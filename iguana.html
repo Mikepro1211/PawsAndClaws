@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iguana</title>
+    <style>
+
+        /* Estilos para el fondo de la página */
+        body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+        header {
+            background-color:#FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el título, subtítulo y texto movibles */
+        .movable-title {
+            position: absolute;
+            color: #456850;
+            font-size: 36px;
+            left: 10%;
+            top: 70%;
+        }
+
+        .movable-subtitle {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 80%;
+        }
+
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 90%;
+        }
+
+        .movable-subtitle-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 120%;
+        }
+
+        .movable-text-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 130%;
+        }
+
+        .movable-subtitle-3 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 160%;
+        }
+
+        .movable-text-3 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 170%;
+        }
+
+        /* Estilos para imagen movible */
+        .movable-image {
+            position: absolute;
+            width: 300px; /* Ajusta el tamaño de la imagen */
+            left: 20%; /* Ajusta según sea necesario */
+            top: 110%;  /* Ajusta según sea necesario */
+            transform: translate(-50%, -50%); /* Centra la imagen */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a img src="Paws.png"></a>
+
+            <a href="inicio.html">Inicio</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Leyes</a>
+            <div class="dropdown-content">
+                <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                <a href="animales de compañía.html">Animales de compañía</a>
+                <a href="animales silvestres.html">Animales Silvestres</a>
+                <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+            </div>
+            </div>
+            
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+        
+        
+        <div class="dropdown">
+            <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Título movible -->
+    <div class="movable-title">
+        Iguana 
+    </div>
+
+    <!-- Subtítulo movible -->
+    <div class="movable-subtitle">
+        Definición
+    </div>
+
+    <!-- Texto movible -->
+    <div class="movable-text">
+        Nombre genérico de unos reptiles parecidos a los
+        lagartos, pero con la lengua simplemente escotada 
+        en el extremo y no protráctil, y los dientes aplicados 
+        a la superficie interna de las mandíbulas. Están generalmente
+        provistos de gran papada y de una cresta espinosa a lo largo 
+        del dorso. Alguna de las especies alcanza hasta un metro de 
+        longitud. 
+
+
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-2">
+        Hábitat
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-2">
+        Habitan principalmente en selvas tropicales y 
+        áreas de manglares, donde encuentran abundante 
+        vegetación y acceso a agua. Prefieren ecosistemas 
+        húmedos, pero también pueden adaptarse a zonas áridas
+        y semiáridas. Su cercanía a cuerpos de agua, como ríos
+        y lagos, es crucial, ya que les permite refugiarse y 
+        alimentarse. 
+
+    
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-3">
+       Consejos
+    </div>
+    <div class="movable-text-3">
+        - Requieren una dieta vegetariana de 
+        hojas, capullos, flores, frutos. Estos 
+        alimentos se fermentan en su estómago, 
+        donde alberga bacterias especializadas 
+        en la descomposición del tejido vegetal.
+
+
+         <br>
+
+        - Deben tener un ambiente con temperatura 
+          adecuada, humedad, iluminación y un lugar 
+          para tomar el sol. 
+
+         <br>
+
+        - Mantener el sustrato del terrario limpio y 
+        realizar una limpieza en profundidad cada dos 
+        días pra evitar enfermedades. 
+
+    </div>
+
+    <!-- Imagen movible -->
+    <img src="iguana.jpg" alt="Guacamayo" class="movable-image">
+
+</body>
+</html>

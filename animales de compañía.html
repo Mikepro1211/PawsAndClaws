@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animales de compañía</title>
+    <style>
+
+        /* Estilos para el fondo de la página */
+        body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+        header {
+            background-color:#FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el título, subtítulo y texto movibles */
+        .movable-title {
+            position: absolute;
+            color: #456850;
+            font-size: 36px;
+            left: 10%;
+            top: 70%;
+        }
+
+        .movable-subtitle {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 80%;
+        }
+
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+        }
+
+        /* Estilos para los cuadros de artículos */
+.article-box {
+    background-color: #456850;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative; /* Cambiado de 'left' a 'position: relative' */
+    top: 300px; /* Ajusta este valor según sea necesario */
+    max-width: calc(50% - 20px); /* Ancho máximo de los cuadros */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+    display: inline-block; /* Permite que los cuadros se alineen en filas */
+    vertical-align: top; /* Alinea los cuadros en la parte superior */
+}
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Centrar texto */
+        .centrado {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a img src="Paws.png"></a>
+
+            <a href="inicio.html">Inicio</a>
+
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Leyes</a>
+                <div class="dropdown-content">
+                    <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                    <a href="animales de compañía.html">Animales de compañía</a>
+                    <a href="animales silvestres.html">Animales Silvestres</a>
+                    <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+                </div>
+            </div>
+            
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+        
+            <div class="dropdown">
+                <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Título movible -->
+    <div class="movable-title">
+        Leyes de Protección Animal y Obligaciones de Cuidado Responsable
+    </div>
+
+    <!-- Subtítulo movible -->
+    <div class="movable-subtitle">
+        <p class="centrado"> <strong>TÍTULO III. Tenencia, Protección y Manejo de Animales </strong><br>
+        <strong>Capitulo 1. De los Animales de Compañía</strong><br></p>
+    </div>
+
+    
+    <!-- Cuadros de artículos en dos filas -->
+    <div class="container">
+        <div class="article-box">
+            <p><strong>Art. 35</strong> El artículo 35 prohíbe la entrada de animales de compañía en locales relacionados con la producción y distribución 
+            de alimentos o productos de salud. Otros locales, como restaurantes y oficinas gubernamentales, pueden decidir si permiten o no la entrada de animales 
+            de compañía, y deben mostrar un distintivo si no los admiten. Los animales callejeros no deben ser maltratados debido a esta restricción. Los animales 
+            que asisten a personas con discapacidades tienen permitido el acceso a estos lugares, siempre y cuando lleven su distintivo.</p>
+        </div>
+        <div class="article-box">
+            <p><strong>Art. 36</strong> El artículo 36 prohíbe la cría, hibridación y adiestramiento de animales de compañía para aumentar su peligrosidad. El Instituto
+            de Bienestar Animal (IBA) emitirá normas para detener estas prácticas y cumplir con tratados internacionales. Además, el IBA puede implementar políticas de 
+            prohibición o control sobre la importación, reproducción y comercialización de animales peligrosos para humanos y otras especies. También se prohíbe organizar 
+            peleas de animales, y en caso de violación, los animales serán decomisados y se interpondrán denuncias penales.</p>
+        </div>
+        <div class="article-box">
+            <p><strong>Artí. 37</strong> Los propietarios o responsables de animales de compañía entrenados para defensa o ataque deben tomar medidas para reducir riesgos 
+            y serán responsables por cualquier accidente, mordedura, transmisión de enfermedades o ataques a personas y otros animales en espacios públicos y privados. Los 
+            animales con problemas de socialización deben usar bozal, correa o pechera adecuada durante sus paseos.</p>
+        </div>
+        <div class="article-box">
+            <p><strong>Art. 38</strong> Los propietarios de animales de compañía con conductas agresivas o secuelas por maltrato tienen la opción de brindarles atención 
+            veterinaria o rehabilitación. Si un animal causa daños por agresión, debe ser evaluado por un veterinario. Si el animal es declarado rehabilitable, el dueño puede 
+            optar por financiar su rehabilitación. Si no es rehabilitable, se debe buscar un lugar adecuado para aislarlo, y como última opción, se puede aplicar el sacrificio humanitario.</p>
+        </div>
+        <div class="article-box">
+            <p><strong>Art. 39</strong> Se prohíbe la reproducción, hibridación, entrenamiento y comercialización de animales de compañía con el fin de alterar su comportamiento 
+            o condiciones naturales, excepto en casos permitidos por la Ley. También se prohíben las modificaciones o mutilaciones estéticas, a menos que un procedimiento quirúrgico 
+            sea necesario por razones veterinarias.</p>
+        </div>
+        <div class="article-box">
+            <p><strong>Art. 50</strong> El sacrificio de animales de compañía solo se permite en casos de sufrimiento, enfermedad, o si representan una amenaza para la salud pública, 
+            siguiendo los reglamentos de la Ley. Debe realizarse de manera humanitaria bajo la supervisión de un veterinario, preferentemente en una clínica veterinaria o en el domicilio 
+            del dueño. El método utilizado debe causar pérdida de conciencia inmediata sin sufrimiento. Si un animal constituye una amenaza para la salud pública, el Ministerio de Salud, 
+            a través de un veterinario, puede llevar a cabo el sacrificio con la colaboración de las municipalidades.</p>
+        </div>
+    </div>
+</body>
+</html>

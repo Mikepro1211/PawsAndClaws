@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.adobe.com/fonts/early-sans-variable#fonts-section" rel="stylesheet">
+    <style>
+
+        /* Estilos para el fondo de la página */
+        body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+        /* Estilos para el botón con opción de modificar tamaño */
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #FCF7BC;
+            border: 2px solid #456850; /* Borde del botón */
+            color: #456850; /* Color de la letra */
+            border-radius: 5px;
+            position: absolute;
+            left: 60%;
+            top: 130%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #456850;
+            color: #FCF7BC; /* Cambia el color de la letra al hacer hover */
+        }
+
+        header {
+            background-color: #FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el título, subtítulo y texto movibles */
+        .movable-title {
+            position: absolute;
+            color: #456850;
+            font-size: 36px;
+            left: 36%; /* Puedes ajustar el valor para moverlo horizontalmente */
+            top: 75%;  /* Puedes ajustar el valor para moverlo verticalmente */
+        }
+
+        .movable-subtitle {
+            position: absolute;
+            color: #456850;
+            font-size: 25px;
+            left: 5%; /* Puedes ajustar el valor para moverlo horizontalmente */
+            top: 85%;  /* Puedes ajustar el valor para moverlo verticalmente */
+        }
+
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 18px;
+            left: 5%; /* Puedes ajustar el valor para moverlo horizontalmente */
+            top: 95%;  /* Puedes ajustar el valor para moverlo verticalmente */
+        }
+
+        /* Estilos para los cuadros de contacto */
+        .contact-box {
+            border: 2px solid #456850;
+            padding: 15px;
+            margin: 10px;
+            background-color: #456850; /* Cambia el fondo de cada cuadro */
+            color: #FCF7BC; /* Cambia el color del texto en el cuadro */
+            border-radius: 5px;
+            width: 40%; /* Reduce el ancho en un 5% */
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        /* Estilos para el contenedor que agrupa las filas */
+        .contact-container {
+            width: 90%;
+            margin: 20% auto 0 auto; /* Agrega un margen superior del 20% */
+            text-align: center;
+        }
+        
+        /* Centrar texto */
+        .centrado {
+            text-align: center;
+        }
+        /* Poner el logo del contacto */
+        .contact-box img {
+            max-width: 100px; /* Tamaño máximo de la imagen */
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto; /* Centra la imagen y agrega margen inferior */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a img src="Paws.png"></a>
+
+            <a href="inicio.html">Inicio</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Leyes</a>
+            <div class="dropdown-content">
+                <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                <a href="animales de compañía.html">Animales de compañía</a>
+                <a href="animales silvestres.html">Animales Silvestres</a>
+                <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+            </div>
+            </div>
+            
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+        
+        
+        <div class="dropdown">
+            <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Título movible -->
+    <div class="movable-title">
+       <strong>Contactos de veterinarias</strong>
+    </div>
+
+    <!-- Subtítulo movible -->
+    <div class="movable-subtitle centrado">
+        Te proporcionamos algunos contactos de veterinarias a los que puedes llamar por si tienes que llevar a tu mascota o alguna especie en <br>caso de emergencia</br>
+    </div>
+
+    <!-- Contenedor de los contactos -->
+    <div class="contact-container centrado">
+
+        <div class="contact-container centrado"></div>
+        <div class="contact-box">
+            <img src="chivopets.jpg">
+            <strong><a href="https://chivopets.sv/" style="color: #FCF7BC;">Chivopets</a></strong><br>
+            Contacto: Citas a través del sitio web o por el número 195.
+        </div>
+
+        <div class="contact-box">
+            <img src="cathome.jpg">
+            <strong>Cathome Veterinaria + Hotel</strong><br>
+            Contacto: 6989-1723
+        </div>
+        
+        <div class="contact-box">
+            <img src="santa fe.jpg">
+            <strong>Hospital Veterinario Santa Fe</strong><br>
+            Contacto: 2224-0606, 2224-1975, 2556-0018 (servicio 24 horas)<br>
+            7922-3085 (lunes a domingo de 8 am a 5:30 pm)
+        </div>
+
+        <div class="contact-box">
+            <img src="los heroes.jpg">
+            <strong>Los Héroes</strong><br>
+            Contacto: 2226-1062
+        </div>
+
+        <div class="contact-box">
+            <img src="agroservicio y veterinaria.jpg">
+            <strong>Agroservicio y Veterinaria Gomez</strong><br>
+            Contacto: 2221-7742
+        </div>
+
+        <div class="contact-box">
+            <img src="la mascota.jpg">
+            <strong>Centro Veterinario La Mascota</strong><br>
+            Contacto: 2298-4230
+        </div>
+
+        <div class="contact-box">
+            <img src="worldvet.jpg">
+            <strong>Veterinaria WorldVet</strong><br>
+            Contacto: 2262-1553
+        </div>
+
+        <div class="contact-box">
+            <img src="mypet.jpg">
+            <strong>Veterinaria MyPet</strong><br>
+            Contacto: 7196-6077
+        </div>
+
+        <div class="contact-box">
+            <img src="esmipet.jpg">
+            <strong>Veterinaria Esmipet San Jacinto</strong><br>
+            Contacto: 7187-4000
+        </div>
+
+        <div class="contact-box">
+            <img src="canino real.jpg">
+            <strong>Hospital Veterinario Canino Real</strong><br>
+            Contacto: 2225-8089
+        </div>
+
+        <div class="contact-box">
+            <img src="Medicentro Veterinario Flor Blanca.jpg">
+            <strong>Medicentro Veterinario Flor Blanca</strong><br>
+            Contacto: 2510-1326
+        </div>
+
+        <div class="contact-box">
+            <img src="san juan.jpg">
+            <strong>Clínica Veterinaria San Juan</strong><br>
+            Contacto: 2522-0011
+        </div>
+    </div>
+</body>
+</html>

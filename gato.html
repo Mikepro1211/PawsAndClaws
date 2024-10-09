@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gato</title>
+    <!-- Añadir los enlaces a las tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.adobe.com/fonts/early-sans-variable#fonts-section" rel="stylesheet">
+    <style>
+
+         /* Estilos para el fondo de la página */
+         body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: 'early-sans-variable'; /* Añadir font-family global */
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+        header {
+            background-color:#FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el título, subtítulo y texto movibles */
+        .movable-title {
+            position: absolute;
+            color: #456850;
+            font-size: 36px;
+            left: 10%;
+            top: 70%;
+            font-family: 'Roboto Condensed'; /* Tipografía del título */
+        }
+
+        .movable-subtitle {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 80%;
+            font-family: 'Roboto Condensed'; /* Tipografía del subtítulo */
+        }
+        
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 90%;
+            font-family: 'early-sans-variable'; /* Tipografía del texto */
+        }
+
+        /* Nuevo subtítulo movible */
+        .movable-subtitle-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 120%;
+            font-family: 'Roboto Condensed'; /* Tipografía del subtítulo */
+        }
+
+        /* Nuevo texto movible */
+        .movable-text-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 130%;
+            font-family: 'early-sans-variable'; /* Tipografía del texto */
+        }
+
+         /* Nuevo nuevo subtítulo movible */
+        .movable-subtitle-3 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%;
+            top: 160%;
+            font-family: 'Roboto Condensed'; /* Tipografía del subtítulo */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-3 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%;
+            top: 170%;
+            font-family: 'early-sans-variable'; /* Tipografía del texto */
+        }
+
+        /* Estilos para imagen movible */
+        .movable-image {
+            position: absolute;
+            width: 300px;
+            left: 20%;
+            top: 120%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a img src="Paws.png"></a>
+
+            <a href="inicio.html">Inicio</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Leyes</a>
+            <div class="dropdown-content">
+                <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                <a href="animales de compañía.html">Animales de compañía</a>
+                <a href="animales silvestres.html">Animales Silvestres</a>
+                <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+            </div>
+            </div>
+            
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+        
+        
+        <div class="dropdown">
+            <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Título movible -->
+    <div class="movable-title">
+        Gato 
+    </div>
+
+    <!-- Subtítulo movible -->
+    <div class="movable-subtitle">
+        Definición
+    </div>
+
+    <!-- Texto movible -->
+    <div class="movable-text">
+        Los gatos son unos excelentes compañeros para cualquier hogar. 
+        Pueden ser tan cariñosos como los perros, pero van a presentar 
+        considerables diferencias, no solo físicas. Son animales independientes, 
+        curiosos y juguetones. Poseen una dentición especializada para desgarrar 
+        carne y una lengua áspera cubierta de pequeñas papilas queratinizadas que 
+        les permite lamer y acicalar su pelaje.
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-2">
+        Hábitat
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-2">
+        El hábitat de un gato doméstico, aquel correspondiente a los
+        que viven cuidados por los humanos en sus hogares, y otros gatos, 
+        considerados salvajes, que se encuentran en entornos naturales sin 
+        contacto con personas. Alrededor de los núcleos humanos permanecen
+        gatos callejeros que se buscan la vida sin que ninguna persona se responsabilice 
+        directamente de ellos. En esas condiciones los gatos solo sobreviven.
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-3">
+       Consejos
+    </div>
+    <div class="movable-text-3">
+        - Uno de los aspectos más importantes que debemos cuidar 
+        a la hora de mantener a nuestros mininos sanos es su alimentación.
+
+         <br>
+
+         - Debemos cuidar mucho la higiene del gato con una limpieza diaria 
+         del arenero donde hacen sus necesidades. 
+  
+        <br>
+
+        -Otro de los pilares básicos para nuestro gato es realizar las visitas
+         la veterinario que sean necesarias. Desde que son cachorros, es
+        importante controlar que todo esté bien, realizar las pruebas necesarias.
+    </div>
+
+    <!-- Imagen movible -->
+    <img src="gato.jpg" alt="Guacamayo" class="movable-image"> 
+        
+
+</body>
+</html>

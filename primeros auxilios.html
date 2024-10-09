@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeros auxilios</title>
+    <style>
+
+         /* Estilos para el fondo de la página */
+         body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+
+        header {
+            background-color:#FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el título, subtítulo y texto movibles */
+        .movable-title {
+            position: absolute;
+            color: #456850;
+            font-size: 36px;
+            left: 10%; /* Puedes ajustar el valor para moverlo horizontalmente */
+            top: 70%;  /* Puedes ajustar el valor para moverlo verticalmente */
+        }
+
+        .movable-subtitle {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Puedes ajustar el valor para moverlo horizontalmente */
+            top: 80%;  /* Puedes ajustar el valor para moverlo verticalmente */
+        }
+        
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Puedes ajustar el valor para moverlo horizontalmente */
+            top: 90%;  /* Puedes ajustar el valor para moverlo verticalmente */
+        }
+
+        /* Nuevo subtítulo movible */
+        .movable-subtitle-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 140%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo texto movible */
+        .movable-text-2 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 150%;  /* Ajusta según sea necesario */
+        }
+
+         /* Nuevo nuevo subtítulo movible */
+        .movable-subtitle-3 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 190%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-3 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 200%;  /* Ajusta según sea necesario */
+        }
+
+         /* Nuevo nuevo subtítulo movible */
+         .movable-subtitle-4 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 240%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-4 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 250%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo subtítulo movible */
+          .movable-subtitle-5 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 290%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-5 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 300%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo subtítulo movible */
+        .movable-subtitle-6 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 345%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-6 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 355%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo subtítulo movible */
+        .movable-subtitle-7 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 410%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-7 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 420%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo subtítulo movible */
+        .movable-subtitle-8 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 460%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-8 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 470%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo subtítulo movible */
+        .movable-subtitle-9 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 510%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-9 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 520%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo subtítulo movible */
+        .movable-subtitle-10 {
+            position: absolute;
+            color: #456850;
+            font-size: 28px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 555%;  /* Ajusta según sea necesario */
+        }
+
+        /* Nuevo nuevo texto movible */
+        .movable-text-10 {
+            position: absolute;
+            color: #456850;
+            font-size: 24px;
+            left: 40%; /* Ajusta según sea necesario */
+            top: 565%;  /* Ajusta según sea necesario */
+        }
+
+        /* Estilos para imagen movible */
+        .movable-image {
+            position: absolute;
+            width: 350px; /* Ajusta el tamaño de la imagen */
+            left: 20%; /* Ajusta según sea necesario */
+            top: 110%;  /* Ajusta según sea necesario */
+            transform: translate(-50%, -50%); /* Centra la imagen */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a img src="Paws.png"></a>
+
+            <a href="inicio.html">Inicio</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Leyes</a>
+            <div class="dropdown-content">
+                <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                <a href="animales de compañía.html">Animales de compañía</a>
+                <a href="animales silvestres.html">Animales Silvestres</a>
+                <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+            </div>
+            </div>
+            
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+
+            <div class="dropdown">
+            <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+        
+        
+        <div class="dropdown">
+            <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Título movible -->
+    <div class="movable-title">
+        Primeros Auxilios
+    </div>
+
+    <!-- Subtítulo movible -->
+    <div class="movable-subtitle">
+        1. Evaluación Inicial
+
+    </div>
+
+    <!-- Texto movible -->
+    <div class="movable-text">
+        -Seguridad: Asegúrate de que tanto el animal como tú estén fuera de peligro antes de intentar ayudar.
+    <br>
+
+    <br>
+        -Calma: Mantén la calma para evitar asustar más al animal, lo cual puede complicar la situación.
+    <br>
+    
+    <br>
+        -Observación: Evalúa rápidamente los signos vitales, como la respiración, el pulso, el color de las encías, y si el animal está consciente.
+
+
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-2">
+        2. Heridas y Hemorragias
+
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-2">
+        -Cortes y raspaduras: Limpia la herida con agua o solución salina y cubre con un apósito limpio.
+    <br>
+    
+    <br>
+        -Hemorragias: Aplica presión directa con una gasa o paño limpio sobre la herida. Si es una hemorragia severa, mantén la presión hasta que llegues al veterinario.
+
+        
+        
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-3">
+        3. Envenenamiento
+
+    </div>
+    <div class="movable-text-3">
+        -Identifica el veneno: Si es posible, identifica la sustancia que el animal ha ingerido o con la que ha tenido contacto.
+    <br>
+    
+    <br>
+        -No inducir el vómito sin consultar: En algunos casos, inducir el vómito puede ser peligroso. Consulta con un veterinario o con un centro de control de envenenamiento animal.
+
+        
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-4">
+        4.Asfixia
+     </div>
+     <div class="movable-text-4">
+        -Revisión: Si el animal se está asfixiando, revisa su boca para ver si hay un objeto obstruyendo las vías respiratorias.
+        <br>
+    
+    <br>
+        -Extracción: Si puedes ver el objeto y es seguro retirarlo, hazlo con cuidado. No intentes meter los dedos si no puedes ver claramente el objeto.
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-5">
+        5. Golpes de Calor
+
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-5">
+        -Síntomas: El animal puede mostrar signos de jadeo excesivo, salivación, debilidad, o colapso.
+        <br>
+    
+    <br>
+        -Enfriamiento: Lleva al animal a un lugar fresco y aplica agua fresca (no fría) en el cuerpo, especialmente en las áreas de la cabeza, cuello, y pecho. No uses agua helada ni lo sumerjas en agua fría, ya que esto puede causar un shock.
+
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-6">
+        6. Resucitación Cardiopulmonar (RCP)
+
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-6">
+        -Reanimación: Si el animal no respira o no tiene pulso, puedes intentar la RCP.
+    <br>
+
+    <br>
+        -Compresiones torácicas: Coloca a la mascota de lado y aplica compresiones torácicas en el lado izquierdo, justo detrás del codo, en intervalos regulares.
+    <br>
+    
+    <br>
+        -Respiración artificial: Si es necesario, ciérrale la boca y sopla aire en las fosas nasales cada pocos segundos, alternando con las compresiones.
+
+
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-7">
+        7. Convulsiones
+
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-7">
+        -Protége al animal: Aleja objetos peligrosos para evitar que el animal se lastime durante la convulsión.
+        <br>
+    
+    <br>
+        -No interfieras: No intentes abrir la boca del animal ni sostenerlo durante la convulsión. Simplemente espera a que pase y luego busca ayuda veterinaria.
+
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-8">
+        8. Fracturas y Esguinces
+
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-8">
+        -Inmovilización: Si sospechas de una fractura, trata de inmovilizar el área afectada usando una férula improvisada (como una tabla o periódico enrollado) y evita que el animal se mueva innecesariamente.
+        <br>
+    
+    <br>
+        -No intentes arreglarlo tú mismo: No intentes alinear o ajustar el hueso; busca atención veterinaria inmediata.
+
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-9">
+        9. Quemaduras
+
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-9">
+        -Enfriamiento: Enfría el área quemada con agua fresca (no helada) durante varios minutos.
+    <br>
+    
+    <br>
+        -Cubre la herida: Aplica un apósito limpio y seco sobre la quemadura, evitando que el animal se lama o frote la zona.
+
+    </div>
+
+    <!-- Nuevo subtítulo movible -->
+    <div class="movable-subtitle-10">
+        10. Ahogamiento
+
+    </div>
+
+    <!-- Nuevo texto movible -->
+    <div class="movable-text-10">
+        -Reanimación: Si el animal ha estado en el agua y no respira, elimina el agua de las vías respiratorias inclinando al animal con la cabeza hacia abajo y luego procede con la RCP si es necesario.
+    
+    <br>
+    
+    <br>
+    </div>
+
+
+ 
+
+    <!-- Imagen movible -->
+    <img src="primeros auxilios.jpg" alt="Guacamayo" class="movable-image"> 
+</body>
+</html>

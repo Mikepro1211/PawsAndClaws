@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Veterinarias</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <style>
+        /* Estilos para el fondo de la página */
+        body {
+            background-color: #FCF7BC;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos para centrar el contenido en la página */
+        .content {
+            text-align: center;
+            color: #456850;
+        }
+
+        header {
+            background-color: #FCF7BC;
+            padding: 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            background: url('Paws.png') no-repeat center center;
+            background-color: #FCF7BC;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 40%;
+            top: 112%;
+        }
+
+        nav {
+            display: inline-block;
+            background-color: #456850;
+            z-index: 10; /* Colocar el menú por encima del mapa */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            z-index: 10; /* Mantener el menú desplegable sobre el mapa */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #456850;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10; /* Colocar el menú desplegable por encima del mapa */
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #456850;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #456850;
+        }
+
+        /* Estilos para el mapa */
+        #map {
+            height: 400px;
+            margin: 20px auto 10%; /* Añadido margen inferior del 10% */
+            width: 75%;
+            position: absolute;
+            left: 30%; /* Valor inicial de 40% */
+            top: 80%;  /* Valor inicial de 95% */
+            transition: left 0.5s ease, top 0.5s ease;
+        }
+
+        /* Estilos para el título, subtítulo y texto movibles */
+        .movable-title {
+            position: absolute;
+            color: #456850; /* Color del título cambiado */
+            font-size: 36px;
+            left: 40%;
+            top: 70%;
+        }
+
+        .movable-subtitle {
+            position: absolute;
+            color: #456850;
+            font-size: 20px;
+            left: 5%;
+            top: 75%;
+        }
+
+        .movable-text {
+            position: absolute;
+            color: #456850;
+            font-size: 15px;
+            left: 10%;
+            top: 85%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a href="inicio.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Leyes</a>
+                <div class="dropdown-content">
+                    <a href="leyes generalidades.html">¿Qué es la Ley?</a>
+                    <a href="animales de compañía.html">Animales de compañía</a>
+                    <a href="animales silvestres.html">Animales Silvestres</a>
+                    <a href="infracciones y sanciones.html">Infracciones y Sanciones</a>
+                </div>
+            </div>
+            <a href="Primeros auxilios.html">Primeros auxilios</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Veterinarias</a>
+                <div class="dropdown-content">
+                    <a href="contactos.html">Contactos</a>
+                    <a href="mapa.html">Mapa</a>
+                </div>
+            </div>
+            <a href="Realidad virtual.html">Realidad Virtual</a>
+            <div class="dropdown">
+                <a href="biblioteca.html" class="dropbtn">Biblioteca</a>
+                <div class="dropdown-content">
+                    <a href="mamíferos.html">Mamíferos</a>
+                    <a href="Aves.html">Aves</a>
+                    <a href="reptiles.html">Reptiles</a>
+                    <a href="acuáticos.html">Acuáticos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="map"></div>
+
+    <div class="content">
+        <h1>Mapa de veterinarias</h1>
+        <div class="movable-subtitle">
+            Te recomendamos unas lista de las veterinarias<br> con las mejores reseñas
+        </div>
+
+        <div class="movable-text">
+            Cathome Veterinaria + Hotel<br>
+            Hospital Veterinario Santa Fe<br>
+            Veterinaria Los Héroes<br>
+            Agroservicio Y Veterinaria Gomez<br>
+            Centro Veterinario La Mascota<br>
+            Veterinaria WorldVet<br>
+            Veterinaria MyPet<br>
+            Veterinaria Esmipet San Jacinto<br>
+            Medicentro Veterinario Flor Blanca<br>
+            Clínica Veterinaria San Juan
+        </div>
+        
+    <script>
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showposition);
+            } else {
+                alert("Error al obtener la ubicación.");
+            }
+        }
+
+        function showposition(position){
+            var latitud = position.coords.latitude;
+            var longitud = position.coords.longitude;
+
+            var map = L.map('map').setView([latitud, longitud], 13);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            L.marker([latitud, longitud]).addTo(map).bindPopup("Ubicación Actual").openPopup();
+
+            // Agregar otras veterinarias
+            L.marker([13.6755798,-89.2528186]).addTo(map).bindPopup("Chivo Pet").openPopup();
+            L.marker([13.7063223,-89.2206422]).addTo(map).bindPopup("Cathome Veterinaria + Hotel").openPopup();
+            L.marker([13.6846116,-89.2301158]).addTo(map).bindPopup("Hospital Veterinario Santa Fe").openPopup();
+            L.marker([13.7104655,-89.2094434]).addTo(map).bindPopup("Veterinaria Los Héroes").openPopup();
+            L.marker([13.6931098,-89.1974719]).addTo(map).bindPopup("Agroservicio Y Veterinaria Gomez").openPopup();
+            L.marker([13.6973411,-89.2347416]).addTo(map).bindPopup("Centro Veterinario La Mascota").openPopup();
+            L.marker([13.7106254,-89.2352775]).addTo(map).bindPopup("Veterinaria Worldvet").openPopup();
+            L.marker([13.7111896,-89.1898114]).addTo(map).bindPopup("Veterinaria MyPet").openPopup();
+            L.marker([13.6768258,-89.1911976]).addTo(map).bindPopup("Veterinaria Esmipet San Jacinto").openPopup();
+            L.marker([13.7164314,-89.2131233]).addTo(map).bindPopup("Hospital Veterinario Canino Real").openPopup();
+            L.marker([13.6967567,-89.2154065]).addTo(map).bindPopup("Medicentro Veterinario Flor Blanca").openPopup();
+            L.marker([13.7065134,-89.2264947]).addTo(map).bindPopup("Clínica Veterinaria San Juan").openPopup();
+        }
+        
+        getLocation();
+    </script>
+</body>
+</html>
